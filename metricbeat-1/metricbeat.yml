@@ -1,0 +1,8 @@
+metricbeat.modules:
+- module: prometheus
+  metricsets: ["collector"]
+  period: 10s
+  hosts: ["node-exporter:9100"]
+  namespace: "solution-1"
+output.logstash:
+  hosts: 'logstash:5000'

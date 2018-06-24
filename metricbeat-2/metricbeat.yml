@@ -1,0 +1,11 @@
+metricbeat.modules:
+- module: prometheus
+  metricsets: ["collector"]
+  period: 10s
+  hosts: ["node-exporter:9100"]
+  namespace: "solution-2"
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  index: "solution-2-%{+yyyy.MM.dd}"
+setup.template.name: "solution-2-template"
+setup.template.pattern: "solution-2-*"

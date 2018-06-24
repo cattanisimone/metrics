@@ -1,0 +1,18 @@
+{
+  "index_patterns": "solution-1-*",
+  "settings": {},
+  "mappings": {
+    "doc": {
+      "dynamic_templates": [
+        {
+          "monitoring_string_mapping": {
+            "match_mapping_type": "string",
+            "mapping": {
+              "type": "keyword"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
